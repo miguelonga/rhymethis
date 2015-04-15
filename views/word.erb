@@ -12,6 +12,9 @@
 
 h1 {
     padding:            10px;
+    font-size: 90px;
+    letter-spacing: 10px;
+    line-height: 90px;
     }
 
 #wrap {
@@ -59,7 +62,7 @@ h1 {
             content:            "Reto mental";
             }
         #thumbnail-4:hover:before {
-            content:            "Protista";
+            content:            "Chicolas";
             }
         #thumbnail-5:hover:before {
             content:            "Monera";
@@ -71,12 +74,41 @@ h1 {
             line-height:        150px;
             text-align:         center;
             }
+
+
+#wordbttn{
+
+	color: white;
+    list-style: none;
+    background-color: #E5E5E5;
+    border: 5px solid;
+    border-bottom-color: #ADADAD;	
+    border-right-color: #ADADAD;
+    border-left-color: #dfdcdc;	
+    border-top-color: #ececec;
+
+
+}
+
+
 </style>
 
-<div style="margin-top:70px;" class="row">
-  <div class="span4 offset4">
-  	<a href='/'><h1><%= @word %></h1></a>
+<div style="margin-top:70px;height:300px;" class="row">
+  <a href=''>
+
+  <div onclick="score_elem.innerHTML = parseInt(score_elem.innerHTML)++;" id="wordbttn" class="span8 offset2">
+
+  	
+        <div style="text-align:center">
+        	<h1><%= @word %></h1>
+        	<h1><%= @word2 %></h1>
+
+
+        </div>
+    
+    
   </div>
+  </a>
   <div class="span2">
     <a href="javascript:play_single_sound();">Play</a>
   </div>
@@ -86,10 +118,21 @@ h1 {
 <audio id="audiotag1" src="Solid_Break_100.wav" preload="auto"></audio>
 
 <script type="text/javascript">
+
+
 	function play_single_sound() {
 		document.getElementById('audiotag1').play();
 	}
+
+	var score_elem = document.getElementById("score");
+
+    
+
+    
 </script>
+
+
+
 
 <div id="wrap">
         <a href='/'>
@@ -102,6 +145,10 @@ h1 {
         </a>
          <a href='/3'>
         <div class="thumbnail span4" id="thumbnail-3">
+        </div>
+        </a>
+         <a href='/4'>
+        <div class="thumbnail span4" id="thumbnail-4">
         </div>
         </a>
     </div>
