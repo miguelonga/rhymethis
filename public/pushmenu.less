@@ -1,0 +1,101 @@
+/* General styles for all menus */
+img {
+    max-width: 100%;
+}
+.main {
+    padding-left: 70px;
+}
+.col-xs-3 img {
+  margin-bottom: 20px;
+}
+.toggle-menu {
+    position: fixed;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+} 
+.toggle-menu a {
+    display: block;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 300;
+    border-bottom: 1px solid #258ecd;
+    padding: 1em;
+    background: #47a3da;
+     white-space: nowrap;
+}
+ 
+.toggle-menu a:hover {
+    background: #258ecd;
+    text-decoration: none;
+}
+
+.toggle-menu a.active {
+    background: #258ecd;
+}
+
+.toggle-menu form {
+    display: flex;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 300;
+    border-bottom: 1px solid #258ecd;
+    background: #47a3da;
+     white-space: nowrap;
+}
+ 
+.toggle-menu form:hover {
+    
+    background: #258ecd;
+    text-decoration: none;
+
+}
+
+.toggle-menu form.active {
+    background: #258ecd;
+}
+.menu-title {
+    opacity: 0;
+    overflow:hidden;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+}
+.glyphicon {
+    display: inline-block;
+    vertical-align: middle;
+}
+/* Vertical menu that slides from the left or right */
+ 
+.menu-open {
+    width: 240px;
+}
+.menu-open .menu-title {
+    opacity: 1;
+}
+ 
+/* Push classes applied to the body */
+ 
+.menu-push {
+    overflow-x: hidden;
+    position: relative;
+    left: 0;
+}
+.menu-push-toright {
+    left: 190px;
+}
+ 
+/* Transitions */
+
+.toggle-menu,
+.menu-push {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+ 
+/* Example media queries */
+ 

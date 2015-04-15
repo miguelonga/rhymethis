@@ -1,0 +1,107 @@
+<style>
+	/*  ----------------------------------------
+    Layout & Styling
+    ----------------------------------------*/
+
+* {
+    color:              #222;
+    font-family:        sans-serif;
+    margin:             0;
+    padding:            0;
+    }
+
+h1 {
+    padding:            10px;
+    }
+
+#wrap {
+    margin:             auto;
+    padding:            20px;
+    }
+
+.thumbnail {
+    float:              left;
+    margin:             10px;
+    }
+
+
+/*  ----------------------------------------
+    Required
+    ----------------------------------------*/
+
+#thumbnail-1 {
+    background-color:   #B6D884;
+        /* Replace with background image (CSS) or image (HTML) */
+    }
+#thumbnail-2 {
+    background-color:   #FFED81;
+    }
+#thumbnail-3 {
+    background-color:   #F8A792;
+    }
+#thumbnail-4 {
+    background-color:   #877BB9;
+    }
+#thumbnail-5 {
+    background-color:   #6ACBDE;
+    }
+.thumbnail {
+    height:             150px;
+    width:              250px;
+    }
+        #thumbnail-1:hover:before {
+            content:            "De viaje";
+            }
+        #thumbnail-2:hover:before {
+            content:            "Asalto en un avión";
+            }
+        #thumbnail-3:hover:before {
+            content:            "Reto mental";
+            }
+        #thumbnail-4:hover:before {
+            content:            "Protista";
+            }
+        #thumbnail-5:hover:before {
+            content:            "Monera";
+            }
+        .thumbnail:hover:before {
+            background:         rgba(0,0,0,0.75);
+            color:              #FFF;
+            display:            block;
+            line-height:        150px;
+            text-align:         center;
+            }
+</style>
+
+<div style="margin-top:70px;" class="row">
+  <div class="span4 offset4">
+  	<a href='/'><h1><%= @word %></h1></a>
+  </div>
+  <div class="span2">
+    <a href="javascript:play_single_sound();">Play</a>
+  </div>
+</div>
+
+
+<audio id="audiotag1" src="Solid_Break_100.wav" preload="auto"></audio>
+
+<script type="text/javascript">
+	function play_single_sound() {
+		document.getElementById('audiotag1').play();
+	}
+</script>
+
+<div id="wrap">
+        <a href='/'>
+        <div class="thumbnail span4" id="thumbnail-1">
+        </div>
+        </a>
+        <a href='/2'>
+        <div class="thumbnail span4" id="thumbnail-2">
+        </div>
+        </a>
+         <a href='/3'>
+        <div class="thumbnail span4" id="thumbnail-3">
+        </div>
+        </a>
+    </div>
